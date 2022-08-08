@@ -1,0 +1,155 @@
+.comparing__numbers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(139, 70, 235);
+}
+.number__inputs {
+    display: flex;
+    justify-content: space-around;
+}
+.first__number {
+    border-radius: 6px;
+    border-color: orangered;
+}
+.second__number {
+    border-radius: 6px;
+    border-color: orangered;
+
+}
+.comparing-result {
+    font-size: 18px;
+    color: black;
+}
+.unit__numbers {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(114, 55, 197, 0.932);
+
+}
+
+#inputs-style{
+    display: flex;
+    justify-content: space-around;
+
+}
+
+.first {
+    border-radius: 6px;
+    border-color: orangered;
+
+
+}
+.second {
+    border-radius: 6px;
+    border-color: orangered;
+
+}
+.third {
+    border-radius: 6px;
+    border-color: orangered;
+
+}
+.result__of-unit {
+    width: 150px;
+    height: 100px;
+    font-size: 18px;
+    color: black;
+}
+
+.area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(76, 58, 181);
+}
+.number-one {
+    border-radius: 6px;
+    border-color: orangered;
+
+}
+.number-two {
+    border-radius: 6px;
+    border-color: orangered;
+
+}
+.output__area {
+    font-size: 18px;
+    color: black;
+
+}
+.perfect__number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(76, 121, 199);
+
+}
+.random-number {
+    border-radius: 6px;
+    border-color: orangered;
+
+}
+.output {
+    width: 150px;
+    height: 100px;
+    font-size: 18px;
+    color: black;
+
+}
+.diapason {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(76, 183, 199);
+
+}
+.beggining__of-spectr {
+    border-radius: 6px;
+    border-color: orangered;
+    background-color: white;
+
+}
+.end__of-spectr {
+    border-radius: 6px;
+    border-color: orangered;
+    background-color: white;
+
+}
+.perf__numb {
+    width: 150px;
+    height: 100px;
+    font-size: 18px;
+    color: black;
+
+}
+p{
+    font-size: 25px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: bisque;
+}
+
+input{
+    height: 29px;
+    width: 114px;
+}
+label{
+    color: bisque;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+button{
+    width: 100px;
+    height: 39px;
+    background-color: #fff;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;    
+    font-weight: 400;
+    font-size: 20px;
+    color: black;
+    border-radius: 6px;
+}
+.start-compare{
+    width: 125px;
+}
