@@ -56,88 +56,64 @@ function calcArea(areaOfRect) {
 */
 
 //document.querySelector('.random-number').change = findPerfNumber;
-document.querySelector('.check').onclick = findPerfNumber;
-function findPerfNumber(number){
-number = document.querySelector('.random-number').value;
+document.querySelector('.check').onclick = () => {
+    // document.querySelector('.output').innerHTML = isPerfect(Number(input.value)) ? "It is a perfect number" : "It isn`t a perfect number"
+    document.querySelector('.output').innerHTML = `It is${isPerfect(+input.value) ? '' : "n't"} a perfect number`
+
+
+    // if (isPerfect(Number(input.value))){
+    //     document.querySelector('.output').innerHTML = "It is a perfect number"
+    // } else {
+    //     document.querySelector('.output').innerHTML = "It isn`t a perfect number"
+    // }
+} ;
+
+const input = document.querySelector('.custom-number')
+
+
+function isPerfect(number) {
     let temp = 0;
-    for (let i=1; i<=number/2; i++) {
-         if(number % i === 0)
-          {
+    for (let i = 1; i <= number / 2; i++) {
+        if (number % i === 0) {
             temp += i;
-          }
-     }
-   
-     if (temp === number && temp !== 0) {
-       document.querySelector('.output').innerHTML = 'It is a perfect number';
-        }  else{
-            document.querySelector('.output').innerHTML = 'Sorry, it`s not a perfect number';
-        }   
- } 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function findPerfNumber() {
-
-//     let numberToCheck = document.querySelector('.random-number');
-//     //знайти усі дільники числа
-//     if (numberToCheck.isInteger(num) && num > 0) {
-//         let allDividers = [];
-
-//         for (let i = 0; i <= num; i++) {
-//             if ((num % i) == 0) {
-//                 allDividers.push(i);
-//             }
-//         }
-//     }
-//     //знайти сумму дільників     
-//     function getSum(accumulator, currentValue) {
-//         return accumulator + currentValue;
-//     }
-
-//     let sum = allDividers.reduce(getSum);
-//     //перевірка чи є число ідеальним
-//     if (numberToCheck == sum) {
-//         document.querySelector('.output').innerHTML = 'Cool, this number is really perfect!'
-//     } else (!(numberToCheck == sum)); {
-//         document.querySelector('.output').innerHTML = 'Sorry, this one isn`t perfeckt, try again'
-//     }
-
-// }
-
-//8 taks
-document.querySelector('.finding').onclick = findPerfNumInDiap;
-function findPerfNumInDiap() {
-    const beginingOfSpectr = document.querySelector('.beggining__of-spectr').value;
-    const endOfSpectr = document.querySelector('.end__of-spectr').value;
-    let perfNumbers = [];
-
-    while (beginingOfSpectr <= endOfSpectr) {
-
-        function getPerfNumber() {
-            return accumulator + currentValue;
         }
+    }
+    return temp === number
+}
 
-        let sum = allDividers.reduce(getSum);
-        //перевірка чи є число ідеальним
+const start = document.querySelector('.beggining__of-spectr');
+const end = document.querySelector('.end__of-spectr');
 
-        beginingOfSpectr++;
+document.querySelector('.finding').onclick = () => {
+    document.querySelector('.perf__numb').innerText = findPerfectNumbers(+start.value, +end.value).join(', ..., ')
+}
 
+function findPerfectNumbers(start, end) {
+    const perfectNumbers = [];
+
+    for (let i = start; i <= end; i++) {
+        if (isPerfect(i)) {
+            perfectNumbers.push(i)
+        }
     }
 
+    return perfectNumbers
 }
+
+
+console.log(findPerfectNumbers(1, 1000));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
